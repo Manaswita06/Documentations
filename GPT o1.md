@@ -79,7 +79,7 @@ The o1-preview model excels at step-by-step reasoning, refining its thinking pro
 
 The o1-preview model is available for **ChatGPT Plus** and **Team** users via the model picker in ChatGPT. Access details:
 
-| **Model**        | **Weekly Limit**            |
+| **Model**        | **Limit**            |
 |------------------|-----------------------------|
 | o1-preview       | 50 queries per week         |
 | o1-mini          | 50 queries per day          |
