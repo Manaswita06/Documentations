@@ -42,7 +42,7 @@ The following table illustrates how **o1-preview** performs against GPT-4o in co
 |---------------------------|---------------------------|--------------------------------------------|
 | **Reasoning Capability**   | Good performance           | Enhanced reasoning, especially in STEM     |
 | **Multimodal Capabilities**| Handles text, images, audio | Primarily text-focused (image capabilities in development) |
-| **Context Window**         | 8K-32K tokens              | 128K tokens                                |
+| **Context Window**         | 128K tokens              | 128K tokens                                |
 | **Response Speed**         | Fast responses             | Slower but more accurate due to reasoning  |
 | **Safety**                 | Focused on safety          | Improved safety, higher resistance to jailbreaking |
 
