@@ -103,7 +103,15 @@ Despite the improved reasoning, the o1 models have some initial limitations:
 | **Rate Limits**                | Restricted to 50 queries per week for o1-preview and 50 per day for o1-mini.     |
 | **Cost**                       | Higher than GPT-4o. o1-preview costs $60/output, and o1-mini $12/output per million tokens.|
 
-The o1 models are currently in beta with limited features. Access is limited to developers in certain usage tiers (check your usage tier here), with low rate limits.
+The o1 models are currently in beta with limited features. Access is limited to developers in certain usage tiers with low rate limits.
+
+### API Usage
+
+| **Type of User** | **GPT o1 preview Cost**                                      | **GPT o1 preview RPM** | **GPT o1 mini Cost**                                      | **GPT o1 mini RPM** |
+|------------------|---------------------------------------------------------|---------|-----------------------------------------------------|---------|
+| **Tier-5**       | Requires 30+ days of payment history and at least $1,000 spent on the API. | 10k     | Requires 30+ days of payment history and at least $1,000 spent on the API. | 30k     |
+| **Tier-4**       | Requires 14+ days of payment history and at least $250 spent. | 10k     | Requires 14+ days of payment history and at least $250 spent. | 10k     |
+| **Tier-3**       | Requires 7+ days of payment history and at least $100 spent. | 5k      | Requires 7+ days of payment history and at least $100 spent. | 5k      |
 
 Beta Limitations
 During the beta phase, many chat completion API parameters are not yet available. Most notably:
