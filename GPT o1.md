@@ -72,7 +72,7 @@ OpenAI o1-preview incorporates advanced safety mechanisms, improving its ability
 
 The o1-preview model excels at step-by-step reasoning, refining its thinking process as it solves problems. This differs from previous models that relied on more immediate responses.
 
-- **Reinforcement Learning**: The model learns to apply "chain-of-thought" reasoning, improving its ability to recognize mistakes and adapt strategies over time.
+- **Reinforcement Learning**: The model learns to apply "chain-of-thought" reasoning, improving its ability to recognize mistakes and adapt strategies over time. GPT o1 is trained with improved techniques like **Reinforcement Learning from Human Feedback (RLHF)** and possibly other unsupervised and supervised learning that better align its outputs with human expectations. o1 dynamically generates sub-tasks and answers in parallel, using a reward model to evaluate each action’s expected score. It then selects the highest-scoring path for its final output.
 
 ---
 
@@ -98,10 +98,25 @@ Despite the improved reasoning, the o1 models have some initial limitations:
 | **Limitation**                 | **Description**                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------|
 | **Feature Gaps**               | Lacks web browsing, image processing, and file uploads at launch.               |
-| **API Restrictions**           | API limits some features such as function calling and streaming capabilities.    |
+| **API Restrictions**           | Only Usage Tier 3, 4 and 5 API accounts can access the o1-preview and o1-mini API models.    |
 | **Response Time**              | Slightly slower than previous models due to more thorough reasoning processes.   |
 | **Rate Limits**                | Restricted to 50 queries per week for o1-preview and 50 per day for o1-mini.     |
 | **Cost**                       | Higher than GPT-4o. o1-preview costs $60/output, and o1-mini $12/output per million tokens.|
+
+The o1 models are currently in beta with limited features. Access is limited to developers in certain usage tiers (check your usage tier here), with low rate limits.
+
+Beta Limitations
+During the beta phase, many chat completion API parameters are not yet available. Most notably:
+
+- **Modalities**: text only, images are not supported.
+- **Message types**: user and assistant messages only, system messages are not supported.
+- **Streaming**: not supported.
+- **Tools**: tools, function calling, and response format parameters are not supported.
+- **Logprobs**: not supported.
+- **Other**: temperature, top_p and n are fixed at 1, while presence_penalty and frequency_penalty are fixed at 0.
+- **Assistants and Batch**: these models are not supported in the Assistants API or Batch API.
+
+Source: [Reasoning models](https://platform.openai.com/docs/guides/reasoning/quickstart)
 
 ---
 
