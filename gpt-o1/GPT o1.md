@@ -20,22 +20,24 @@ The OpenAI o1 series consists of two models:
 | **o1-preview** | Designed for solving complex problems requiring advanced reasoning. | Best suited for high-accuracy tasks in coding, math, and science.                            |
 | **o1-mini**    | A more cost-efficient version of o1-preview, focusing on coding tasks. | Optimized for debugging and faster execution at a reduced cost.                             |
 
-### GPT O1-preview:
-- full version of the O1 model, designed for high-complexity tasks
+[Source](https://medium.com/@saman.rahbar/a-comprehensive-technical-review-of-openais-gpt-o1-and-transformer-advancements-021945a10b0d#:~:text=Introduction,reasoning%20and%20advanced%20transformer%20topologies)
+
+### GPT o1-preview:
+- Full version of the O1 model, designed for high-complexity tasks
 - The preview version is more computationally demanding and expensive compared to other models, but it performs at a PhD level in subjects like physics, chemistry, and biology
 - For API usage, the OpenAI o1-preview model costs $15 per 1 million input tokens and $60 per 1 million output tokens.
 
-### GPT O1-mini:
-- A smaller, faster, and more cost-effective version of O1
-- ideal for tasks that still require logical reasoning but with lower computational costs
-- Doesn’t have same depth of "broad world knowledge" as the preview version 
-- particularly suitable for programming and STEM-related activities
-- mini version is 80% cheaper than O1-preview
+### GPT o1-mini:
+- A smaller, faster, and more cost-effective version of o1
+- Ideal for tasks that still require logical reasoning but with lower computational costs
+- Doesn’t have the same depth of "broad world knowledge" as the preview version 
+- Particularly suitable for programming and STEM-related activities
+- The mini version is 80% cheaper than o1-preview
 - The o1-mini model costs $3 per 1 million input tokens and $12 per 1 million output tokens
 
 
 ### Use Cases
-- **Science**: Used by researchers for annotating cell sequencing data.
+- **Science**: Used by researchers to annotate cell sequencing data.
 - **Physics**: Assists physicists in generating mathematical formulas for quantum optics.
 - **Coding**: Helps developers handle multi-step workflows and complex debugging tasks.
 
@@ -70,7 +72,8 @@ The following table illustrates how **o1-preview** performs against GPT-4o in co
 | **Attribute**          | **GPT-4**         | **GPT-o1-preview**         | **GPT-o1-mini**         |
 |------------------------|-------------------|----------------------------|-------------------------|
 | **Reasoning Capabilities** | Strong            | Advanced Chain-of-Thought, enhanced reasoning, especially in STEM   | Advanced Chain-of-Thought |
-| **Latency**             | Low               | High                        | Moderate                 |
+| **Latency**             | Fast (~3 seconds) | Slow (~30+ seconds per response) | Moderate (slower than GPT-4) |
+| **Efficiency**          | High              | Lower due to complexity     | Balanced                 |    
 | **Computational Cost**  | Moderate          | High                        | Medium                   |
 | **STEM Performance**    | Good              | Excellent                   | Excellent                |
 | **Safety and Alignment**| Good              | Excellent                   | Excellent                |
@@ -95,7 +98,7 @@ The following table illustrates how **o1-preview** performs against GPT-4o in co
 6.	**Enhanced Training Techniques**:
     - GPT o1 is trained with improved techniques like Reinforcement Learning from Human Feedback (RLHF) and possibly other unsupervised and supervised learning that better align its outputs with human expectations. o1 dynamically generates sub-tasks and answers in parallel, using a reward model to evaluate each action’s expected score. It then selects the highest-scoring path for its final output.
     - **o1-preview** is designed for deep reasoning and complex problem-solving tasks. It performs well in fields requiring intricate understanding, such as competitive programming, scientific computations, and advanced knowledge processing. It excels in benchmarks like **MMLU (Massive Multitask Language Understanding)** with a **91% accuracy, showcasing superior reasoning abilities.
-    - **O1-mini** is optimized for rapid, efficient code generation and cost-effectiveness. It's particularly suitable for coding tasks, such as quick generation of Python or JavaScript functions, while being faster and more lightweight compared to O1-preview.
+    - **o1-mini** is optimized for rapid, efficient code generation and cost-effectiveness. It's particularly suitable for coding tasks, such as quick generation of Python or JavaScript functions, while being faster and more lightweight compared to o1-preview.
   
 ![Chain-Of-Thought](https://github.com/Manaswita06/Documentations/blob/890721c4fd8d16a1c5336e512ccd3600f1bfd7bf/gpt-o1/images/chain_of_thought.png)
 
