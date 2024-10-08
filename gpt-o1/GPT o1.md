@@ -51,6 +51,9 @@ The following table illustrates how **o1-preview** performs against GPT-4o in co
 | Codeforces Coding Competition           | Below 89th percentile         | 89th percentile |
 | Physics, Chemistry, Biology             | Below PhD level         | Similar to PhD students |
 
+![Model Performance](https://github.com/Manaswita06/Documentations/blob/890721c4fd8d16a1c5336e512ccd3600f1bfd7bf/gpt-o1/images/model_performance.png)
+
+
 ### Comparison with Previous Models
 
 | **Feature**               | **GPT-4o**                | **o1-preview**                             |
@@ -91,6 +94,8 @@ The following table illustrates how **o1-preview** performs against GPT-4o in co
     - GPT o1 is trained with improved techniques like Reinforcement Learning from Human Feedback (RLHF) and possibly other unsupervised and supervised learning that better align its outputs with human expectations. o1 dynamically generates sub-tasks and answers in parallel, using a reward model to evaluate each action’s expected score. It then selects the highest-scoring path for its final output.
     - **o1-preview** is designed for deep reasoning and complex problem-solving tasks. It performs well in fields requiring intricate understanding, such as competitive programming, scientific computations, and advanced knowledge processing. It excels in benchmarks like **MMLU (Massive Multitask Language Understanding)** with a **91% accuracy, showcasing superior reasoning abilities.
     - **O1-mini** is optimized for rapid, efficient code generation and cost-effectiveness. It's particularly suitable for coding tasks, such as quick generation of Python or JavaScript functions, while being faster and more lightweight compared to O1-preview.
+  
+![Chain-Of-Thought](https://github.com/Manaswita06/Documentations/blob/890721c4fd8d16a1c5336e512ccd3600f1bfd7bf/gpt-o1/images/chain_of_thought.png)
 
 ---
       
@@ -118,6 +123,13 @@ OpenAI o1-preview incorporates advanced safety mechanisms, improving its ability
 The o1-preview model excels at step-by-step reasoning, refining its thinking process as it solves problems. This differs from previous models that relied on more immediate responses.
 
 - **Reinforcement Learning**: The model learns to apply "chain-of-thought" reasoning, improving its ability to recognize mistakes and adapt strategies over time. GPT o1 is trained with improved techniques like **Reinforcement Learning from Human Feedback (RLHF)** and possibly other unsupervised and supervised learning that better align its outputs with human expectations. o1 dynamically generates sub-tasks and answers in parallel, using a reward model to evaluate each action’s expected score. It then selects the highest-scoring path for its final output.
+
+### Context window and costs
+
+Both o1-preview and o1-mini offer a context window of 128,000 tokens. However, each completion has a maximum limit on the total number of output tokens generated, including the invisible reasoning and visible completion tokens. To avoid unexpected costs and ensure the model has enough room to "think," it's crucial to manage the context window effectively and set appropriate limits using the max_completion_tokens parameter.
+
+![Context Window](https://github.com/Manaswita06/Documentations/blob/890721c4fd8d16a1c5336e512ccd3600f1bfd7bf/gpt-o1/images/context_window.png)
+
 
 ---
 
@@ -237,6 +249,47 @@ OpenAI plans to introduce continuous updates to enhance o1-preview’s functiona
 ## 11. Conclusion
 
 The **OpenAI o1-preview** model represents a significant leap in AI's ability to reason through complex problems. While it has some initial limitations, its improved safety protocols, reasoning capabilities, and overall performance make it an invaluable tool for industries relying on advanced problem-solving in STEM fields.
+
+```mermaid
+graph TD;
+    A[Start] --> B{Select Model Type}
+    
+    B --> C1[GPT o1 Preview]
+    B --> C2[GPT o1 Mini]
+    
+    C1 --> D1{Requirements Check}
+    C2 --> D2{Requirements Check}
+    
+    D1 --> E1[Tier 5: 30+ days, $1,000 spent]
+    D1 --> E2[Tier 4: 14+ days, $250 spent]
+    D1 --> E3[Tier 3: 7+ days, $100 spent]
+    
+    D2 --> E4[Tier 5: 30+ days, $1,000 spent]
+    D2 --> E5[Tier 4: 14+ days, $250 spent]
+    D2 --> E6[Tier 3: 7+ days, $100 spent]
+    
+    E1 --> F1[Features: Advanced Chain-of-Thought, High Latency, High Computational Cost]
+    E2 --> F1
+    E3 --> F1
+    
+    E4 --> F2[Features: Advanced Chain-of-Thought, Moderate Latency, Medium Computational Cost]
+    E5 --> F2
+    E6 --> F2
+    
+    F1 --> G1{Cost and RPM Comparison}
+    F2 --> G1
+    
+    G1 --> H1[Cost for Tier 5: $1,000 spent, 10k RPM for Preview, 30k RPM for Mini]
+    G1 --> H2[Cost for Tier 4: $250 spent, 10k RPM for both]
+    G1 --> H3[Cost for Tier 3: $100 spent, 5k RPM for both]
+    
+    H1 --> I1[Integration Features: Limited currently, High Prompt Dependency]
+    H2 --> I1
+    H3 --> I1
+    
+    I1 --> J[Conclusion: Recommendations based on Strengths]
+```
+
 
 For detailed technical research, visit the [OpenAI Research Post](https://openai.com/index/learning-to-reason-with-llms).
 
