@@ -1,4 +1,4 @@
-# OpenAI o1 documentation
+# A Comprehensive Overview of GPT o1 Preview and GPT o1 Mini
 
 ## 1. Overview
 
@@ -53,6 +53,8 @@ The following table illustrates how **o1-preview** performs against GPT-4o in co
 
 ![Model Performance](https://github.com/Manaswita06/Documentations/blob/890721c4fd8d16a1c5336e512ccd3600f1bfd7bf/gpt-o1/images/model_performance.png)
 
+[Image Source](https://openai.com/index/learning-to-reason-with-llms/)
+
 
 ### Comparison with Previous Models
 
@@ -97,6 +99,8 @@ The following table illustrates how **o1-preview** performs against GPT-4o in co
   
 ![Chain-Of-Thought](https://github.com/Manaswita06/Documentations/blob/890721c4fd8d16a1c5336e512ccd3600f1bfd7bf/gpt-o1/images/chain_of_thought.png)
 
+[Image Source](https://arxiv.org/pdf/2201.11903)
+
 ---
       
 ## 5. Safety and Alignment
@@ -130,6 +134,7 @@ Both o1-preview and o1-mini offer a context window of 128,000 tokens. However, e
 
 ![Context Window](https://github.com/Manaswita06/Documentations/blob/890721c4fd8d16a1c5336e512ccd3600f1bfd7bf/gpt-o1/images/context_window.png)
 
+[Image Source](https://medium.com/@codenze/under-the-hood-of-openai-o1-architectural-innovations-in-reasoning-based-ai-97c90ace525f)
 
 ---
 
@@ -250,6 +255,8 @@ OpenAI plans to introduce continuous updates to enhance o1-preview’s functiona
 
 The **OpenAI o1-preview** model represents a significant leap in AI's ability to reason through complex problems. While it has some initial limitations, its improved safety protocols, reasoning capabilities, and overall performance make it an invaluable tool for industries relying on advanced problem-solving in STEM fields.
 
+### Overall summary of GPT o1
+
 ```mermaid
 graph TD;
     A[Start] --> B{Select Model Type}
@@ -286,8 +293,7 @@ graph TD;
     H1 --> I1[Integration Features: Limited currently, High Prompt Dependency]
     H2 --> I1
     H3 --> I1
-    
-    I1 --> J[Conclusion: Recommendations based on Strengths]
+
 ```
 
 
